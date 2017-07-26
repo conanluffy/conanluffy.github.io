@@ -29,7 +29,8 @@ var menu = [
         ['demo/component/111/index.html', '滚动条'],
         ['components/calendar/demo.html', '日历组件'],
         ['demo/component/401/index.html', '滑动轮播图'],
-        ['components/fadeslide/index.html', '渐显渐隐轮播图']
+        ['components/fadeslide/index.html', '渐显渐隐轮播图'],
+        ['mima.html','维吉尼亚密码']
     ],
     ['Vue 相关', ['components/cssfilter/app/index.html', 'Filter生成器']],
     ['Node 相关', ['https://github.com/hollowtree/koa-blog', '一个博客']]
