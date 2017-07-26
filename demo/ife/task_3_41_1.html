@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+  <meta charset="utf-8">
+	<title>日历组件</title>
+	<script type="text/javascript">
+		function getTheday(){
+			var date = new Date();
+			theday = {
+				year : date.getFullYear(),
+				month : date.getMonth(),
+				day : date.getDate(),
+				weekday : date.getDay()
+			};
+			return theday;
+		}
+	</script>
+	<style type="text/css">
+		#yearSelect,
+		#monthSelect {
+      width: 4.5em;
+      height: 1.8em;
+      padding: 0.2em 0.4em 0.2em 0.4em;
+      vertical-align: middle;
+      border: 1px solid #e9e9e9;
+      -moz-border-radius: 0.2em;
+      -webkit-border-radius: 0.2em;
+      border-radius: 0.2em;
+      box-shadow: inset 0 0 3px #a0a0a0;
+      font-size: 1.1em;
+    }
+    select#yearSelect option,
+    select#monthSelect option {
+        font-size: 1em;
+        padding: 0.2em 0.4em 0.2em 0.4em;
+    }   
+	</style>
+</head>
+<body>
+  <div>
+  	<table>
+  	  <select id="yearSelect">
+  	  	<script type="text/javascript">
+  	  	  var list = "";
+	  			for (var i = 1900; i <= 2050; i++) {
+	  				if (i == new Date().getFullYear()) {
+	  					list += '<option value="'+ i +'" selected>' + i + '</option>';
+	  				}
+	  				else {
+	  					list += '<option value="'+ i +'">' + i + '</option>';
+	  				}
+	  			}
+	  			document.write(list);
+	  			console.log(document.getElementById('yearSelect').option);
+	  		</script>
+  	  </select>
+  	  <select id="monthSelect">
+  	  	<script type="text/javascript">
+  	  	  var list = "";
+	  			for (var i = 1; i <= 12; i++) {
+	  				if (i == (new Date().getMonth())+1) {
+	  					list += '<option value="'+ i +'" selected>' + i + '</option>';
+	  				}
+	  				else {
+	  					list += '<option value="'+ i +'">' + i + '</option>';
+	  				}
+	  			}
+	  			document.write(list);
+	  		</script>
+  	  </select>
+  	  <script type="text/javascript">
+  	    var list = "";
+  	    var week = ["周日","周一","周二","周三","周四","周五","周六"];
+  	    for (var i = 0; i < week.length; i++) {
+  	      list += '<td>'+ week[i]+'</td>'
+  	    }
+  	    document.write("<tr>"+list+"</tr>");
+  	  </script>
+  	  <script type="text/javascript">
+  	  	var year = document.getElementById('yearSelect').value;
+  	  	var month = document.getElementById('monthSelect').value;
+  	  	var date = new Date(year,month);
+  	    document.write(date);
+  	  </script>
+  	</table>
+  </div>
+</body>
+</html>
