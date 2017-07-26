@@ -1,6 +1,9 @@
 var menu = [
     ['单页面制作',
         ['mima.html','维吉尼亚密码'],
+        ['demo/ife/task_1_6/task_1_6.html', '模拟报纸排版'],
+        ['demo/ife/task_1_7/task_1_7.html', '常见的技术产品官网的页面架构及样式布局'],
+        ['demo/ife/task_1_9/index.html', '一个复杂页面']
         // ['demo/ife/task_1_01_1.html', 'HTML页面'],
         // ['demo/ife/task_1_03_1.html', '三栏式布局'],
         // ['components/csscenter/app/index.html', '定位及居中'],
@@ -12,7 +15,6 @@ var menu = [
         // ['demo/ife/task_1_05_1.html', 'HTML+CSS页面Ⅱ'],
         // ['demo/pages/bootstrap/index.html', 'Bootstrap 初试'],
         // ['demo/ife/task_1_11_1.html', '自适应移动Web页面'],
-        // ['demo/ife/task_1_06_1.html', '模拟报纸排版'],
         // ['demo/ife/task_1_09_1.html', '一个复杂页面'],
         // ['demo/pages/eleme/index.html', '仿饿了么首页'],
         // ['components/somecss3/app/index.html','Try CSS3']
