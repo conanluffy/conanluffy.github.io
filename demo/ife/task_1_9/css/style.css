@@ -1,0 +1,116 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	background: #eeeeed;
+	position: relative;
+}
+
+/*-------header-------*/
+header {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background-color: #2189bf;
+}
+.header_left{
+	position: absolute;
+	margin-top: 11px;
+	margin-left: 60px;
+}
+.header_right{
+	position: absolute;
+	right: 100px;
+	margin: 15px;
+}
+.search{
+	float: left;
+	height: 30px;
+	width: 300px;
+	border-radius: 20px;
+	background: white; 
+}
+.search img{
+	position: absolute;
+	left: 15px;
+	top: 6px;
+}
+.login{
+	float: right;
+	margin-left: 30px;
+	margin-top: 5px;
+}
+.login img{
+	
+}
+.login span{
+	color: white;
+	font-size: 14px; 
+}
+/*-----aside-----*/
+aside{
+	position: relative;
+	height: 1000px;
+	width: 270px;
+	background-color: #2a2e3d;
+}
+.user{
+	height: 150px;
+}
+.user-logo{
+	position: absolute;
+	left: 50px;
+	top: 20px;
+	height: 60px;
+	width: 60px;
+	/*background-color: #bababe;*/
+	border: 1px solid #bababe;
+	border-radius: 30px;
+}
+.user-logo img{
+	margin: 3px;
+	height: 54px;
+	width: 54px;
+	border-radius: 27px;
+	background-color: #bababe; 
+}
+.user span{
+	position: absolute;
+	top: 40px;
+	left: 135px;
+	color: white;
+}
+.user .datas{
+	position: absolute;
+	top: 100px;
+	font-size: 14px;
+	line-height: 14px;
+}
+.collection{
+	float: left;
+	width: 120px;
+	text-align: center;
+	color: #999;
+	border-right: 1px solid #999;
+}
+.fans{
+	float: right;
+	width: 120px;
+	text-align: center;
+	color: #999;
+}
+.nav{
+	list-style-type: none;
+	position: absolute;
+	left: 50px;
+}
+.nav li{
+	height: 50px;
+}
+.nav li span{
+	color: #999999;
+	font-size: 12px;
+	margin-left: 15px;
+}
