@@ -1,6 +1,6 @@
 var menu = [
     ['单页面制作',
-        ['mima.html','维吉尼亚密码'],
+        ['demo/vigenere.html','维吉尼亚密码'],
         ['demo/ife/task_1_6/task_1_6.html', '模拟报纸排版'],
         ['demo/ife/task_1_7/task_1_7.html', '常见的技术产品官网的页面架构及样式布局'],
         ['demo/ife/task_1_9/index.html', '一个复杂页面']
