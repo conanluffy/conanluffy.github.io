@@ -3,7 +3,8 @@ var menu = [
         ['demo/vigenere.html','维吉尼亚密码'],
         ['ife/task_1_6/task_1_6.html', '模拟报纸排版'],
         ['ife/task_1_7/task_1_7.html', '常见的技术产品官网的页面架构及样式布局'],
-        ['ife/task_1_9/index.html', '一个复杂页面']
+        ['ife/task_1_9/index.html', '一个复杂页面'],
+        ['demo/stephencurry.html','库里NBA生涯数据统计图']
         // ['ife/task_1_01_1.html', 'HTML页面'],
         // ['ife/task_1_03_1.html', '三栏式布局'],
         // ['components/csscenter/app/index.html', '定位及居中'],
@@ -21,7 +22,7 @@ var menu = [
     ],
     ['网页小部件',
         ['demo/component/101/index.html', '简易电子时钟'],
-        // ['demo/component/201/index.html', '绘制七巧板'],
+        ['demo/component/201/index.html', '绘制七巧板'],
         // ['ife/task_3_33_1.html', 'SVG 实践'],
         // ['ife/task_3_38_1.html', '排序表格'],
         // ['ife/task_3_39_1.html', '首行冻结的表格'],
