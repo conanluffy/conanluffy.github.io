@@ -8,7 +8,7 @@
 	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<div id="main" style="width: 1000px; height: 800px;margin: 10px auto;">
+	<div id="main" style="width: 1000px; height: 750px;margin: 10px auto;">
 		<script type="text/javascript">
 			var myChart = echarts.init(document.getElementById('main'));
 			var option = {
@@ -27,10 +27,71 @@
 						}
 					}
 				},
+				// ['场数','先发','得分','篮板','助攻','抢断','盖帽','命中','出手','三分命中','三分出手','罚球命中','罚球出手']
 				legend: {
-					data: ['场数','先发','得分','篮板','助攻','抢断','盖帽','命中','出手','三分命中','三分出手','罚球命中','罚球出手'],
-					top: 20,
-					itemWidth: 20,
+					data: [{
+						name: '场数',
+						icon: 'circle'
+					},
+					{
+						name: '先发',
+						icon: 'circle'
+					},
+					{
+						name: '得分',
+						icon: 'circle',
+						textStyle: {
+							color: 'red'
+						}
+					},
+					{
+						name: '篮板',
+						icon: 'circle',
+						textStyle: {
+							color: 'green'
+						}
+					},
+					{
+						name: '助攻',
+						icon: 'circle',
+						textStyle: {
+							color: 'blue'
+						}
+					},
+					{
+						name: '抢断',
+						icon: 'circle'
+					},
+					{
+						name: '盖帽',
+						icon: 'circle'
+					},
+					{
+						name: '命中',
+						icon: 'circle'
+					},
+					{
+						name: '出手',
+						icon: 'circle'
+					},
+					{
+						name: '三分命中',
+						icon: 'circle'
+					},
+					{
+						name: '三分出手',
+						icon: 'circle'
+					},
+					{
+						name: '罚球命中',
+						icon: 'circle'
+					},
+					{
+						name: '罚球出手',
+						icon: 'circle'
+					}],
+					left: 240,
+					width: 700,
 					textStyle: {
 						fontSize: 10
 					}
@@ -62,77 +123,77 @@
 						type : 'value'
 					}
 				],
-				dataZoom: [
-        // {
-        //     type: 'slider',
-        //     show: true,
-        //     yAxisIndex: [0],
-        //     left: '93%',
-        //     start: 0,
-        //     end: 10
-        // },
-        {
-            type: 'inside',
-            yAxisIndex: [0],
-            start: 0,
-            end: 10,
-            startValue: 10,
-            endValue: 20
-        }
-    ],
 				series : [
 					{
 						name:'场数',
 						type:'line',
-						data:[80,74,26,78,78,80,79,79]},
+						data:[80,74,26,78,78,80,79,79]
+					},
 					{
 						name:'先发',
 						type:'line',
-						data:[77,74,23,78,78,80,79,79]},
+						data:[77,74,23,78,78,80,79,79]
+					},
 					{
 						name:'得分',
 						type:'line',
-						data:[1399,1373,383,1786,1873,1900,2375,1999]},
+						data:[1399,1373,383,1786,1873,1900,2375,1999]
+					},
 					{
 						name:'篮板',
 						type:'line',
-						data:[356,286,88,314,334,341,430,353]},
+						data:[356,286,88,314,334,341,430,353]
+					},
 					{
 						name:'助攻',
 						type:'line',
-						data:[472,432,138,539,666,619,527,524]},
+						data:[472,432,138,539,666,619,527,524]
+					},
 					{
 						name:'抢断',
 						type:'line',
-						data:[152,109,39,126,128,163,169,142]},
+						data:[152,109,39,126,128,163,169,142]
+					},
 					{
 						name:'盖帽',
 						type:'line',
-						data:[19,20,8,12,14,16,15,17]},
+						data:[19,20,8,12,14,16,15,17]
+					},
 					{
 						name:'命中',
 						type:'line',
-						data:[528,505,145,626,652,653,805,675]},
+						data:[528,505,145,626,652,653,805,675]
+					},
 					{
 						name:'出手',
 						type:'line',
-						data:[1143,1053,296,1388,1383,1341,1598,1443]},
+						data:[1143,1053,296,1388,1383,1341,1598,1443]
+					},
 					{
 						name:'三分命中',
 						type:'line',
-						data:[166,151,55,272,261,286,402,324]},
+						data:[166,151,55,272,261,286,402,324]
+					},
 					{
 						name:'三分出手',
 						type:'line',
-						data:[380,342,121,600,615,646,886,789]},
+						data:[380,342,121,600,615,646,886,789]
+					},
 					{
 						name:'罚球命中',
 						type:'line',
-						data:[177,212,38,262,308,308,363,325]},
+						data:[177,212,38,262,308,308,363,325]
+					},
 					{
 						name:'罚球出手',
 						type:'line',
-						data:[200,227,47,291,348,337,400,362]}
+						data:[200,227,47,291,348,337,400,362]
+					},
+					{
+						name:'三分命中率',
+						type:'line',
+						data:[200,227,47,291,348,337,400,362]
+					},
 				]
 			};
 			// var option = {
