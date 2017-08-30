@@ -1,0 +1,69 @@
+/*登录对话框*/
+.box{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 6px;
+    width: 35%;
+    margin: auto;
+    padding: 30px 30px;
+}
+.main-box{
+    width: 100%;
+    position: fixed;
+    top:50%;
+    margin-top: -12%;
+    height: 100%;
+}
+.head-logo{
+    text-align: center;
+    width: 100%;
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.box .has-feedback .form-control-feedback{
+  left: 1%;
+  top: 15%;
+  color: #fff;
+  opacity: 0.7;
+}
+.box .has-feedback .form-control{
+  padding-left: 42.5px;
+}
+.box .form-control{
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+}
+#loginBtn{
+  background-color: rgba(0,0,0,0.4);
+  background-image: none;
+  color: #fff;
+  text-shadow: none;
+  border: 1px solid rgb(204,204,204);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .5s,box-shadow ease-in-out .5s;
+}
+#loginBtn:hover{
+  border: 1px solid #66afe9;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6)
+}
+#forgetPwd{
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+/*背景动画*/
+.videocontainer{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1000;
+  overflow: hidden;
+}
+.videocontainer video{
+  width: 100%;
+}

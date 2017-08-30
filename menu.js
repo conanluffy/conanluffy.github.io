@@ -34,6 +34,9 @@ var menu = [
         // ['demo/component/401/index.html', '滑动轮播图'],
         // ['components/fadeslide/index.html', '渐显渐隐轮播图']
     ],
+    ['小项目',
+        ['demo/cnpolice/pages/login.html','长宁区实有人口']
+    ],
     ['Vue 相关', 
         ['components/cssfilter/app/index.html', 'Filter生成器']
     ],

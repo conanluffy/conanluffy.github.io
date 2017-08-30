@@ -1,0 +1,336 @@
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#wraper{
+	width: 100%;
+	height: 100%;
+	/*background: url(../../images/newstyle/bg.png) no-repeat;*/
+	background-size: 100% 100%;
+}
+#wraper .wrap{
+	width: 100%;
+	height: 100%;
+	/*background: url(../../images/page5/page5title.png) no-repeat;
+	background-size: 100% 100%;*/
+	/*padding-top: 6%;*/
+	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+}
+#wraper .wrap .headtop{
+	width: 100%;
+	height: 8%;
+	position: relative;
+	background: url(../../images/image1/headImage.png) no-repeat;
+	background-size: 100% 100%; 
+	margin-bottom: 1%;
+}
+#wraper .wrap .headtop .system{
+	width: 80%;
+	height: 100%;
+	position: relative;
+}
+#wraper .wrap .headtop .system .systempic{
+	position:absolute;
+	width: 50px;
+	height: 50px;
+	left: 1.6%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#wraper .wrap .headtop .system .systempic img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#wraper .wrap .headtop .system .systemname{
+	position: absolute;
+	font-size: 26px;
+	color: white;
+	left: 1.6%;
+	top: 50%;
+	-webkit-transform: translate(70px,-50%);
+	transform: translate(70px,-50%);
+	
+}
+#wraper .wrap .userinfor{
+	position: absolute;
+	width: 7.3%;
+	height: 100%;
+	/*background-color: deeppink;*/
+	top: 0;
+	right: 20px;
+	cursor: pointer;
+	
+}
+#wraper .wrap .userinfor .userimg{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #ccc;
+	
+}
+#wraper .wrap .userinfor .username{
+	position: absolute;
+	font-size: 16px;
+	color: white;
+	left: 60px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+/* #wraper .wrap .userinfor .showquit{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+} */
+#wraper .wrap .userinfor .quit{
+	position: absolute;
+	/* right: 10px; */
+	left: 25px;
+	bottom: -20px;
+	-webkit-transform: translate(-50%,100%);
+	transform: translate(-50%,100%);
+	z-index: 100;
+	/* padding: 5px; */
+	display: none;
+}
+#wraper .wrap .userinfor .quit p{
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-bottom: 20px solid #62acff;
+	border-right: 10px solid transparent;
+	
+	position: absolute;
+	/*top: -5px;*/
+	top: 0px;
+	left: 50%;
+	-webkit-transform: translate(-50%,-100%);
+	transform: translate(-50%, -100%);
+}
+#wraper .wrap .userinfor .quit .quitcontent{
+	/*padding: 3px 10px;*/
+	background-color: #62acff;
+	color: white;
+	cursor: pointer;
+}
+#wraper .wrap .userinfor .quit .quitcontent li{
+	padding: 5px;
+	text-align: center;
+}
+#wraper .wrap .userinfor .quit .quitcontent li:hover{
+	background-color: #ccc;
+	/*color: black;*/
+}
+#wraper .wrap .pagetitle{
+	width: 100%;
+	height: 6.57%;
+	color: black;
+	text-align: center;
+	font-size: 26px;
+}
+#wraper .wrap .operat{
+	width: 100%;
+	height: 6.48%;
+	/*background-color: deeppink;*/
+	box-sizing: border-box;
+	padding: 0 1.6%;
+}
+#wraper .wrap .operat .select{
+	float: left;
+	width: 50%;
+	height: 71.4%;
+	
+	
+}
+#wraper .wrap .operat .select .turnhome{
+	width: 145px;
+	height: 100%;
+	float: left;
+	background-color: #0066ff;
+	cursor: pointer;
+	position: relative;
+	
+}
+#wraper .wrap .operat .select .turnhome span{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 14px;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	color: white;
+}
+#wraper .wrap .operat .select .area{
+	float: left;
+	margin-left: 5px;
+	width: 230px;
+	height: 100%;
+	box-sizing: border-box;
+	border: 1px solid #0066ff;
+	position: relative;
+}
+
+#wraper .wrap .operat .select .area .areamenu{
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 230px;
+	height: 0;
+	background-color: #0066ff;
+	overflow: hidden;
+}
+#wraper .wrap .operat .select .area .areamenu ul{
+	width: 100%;
+	height: 100%;
+}
+#wraper .wrap .operat .select .area .areamenu ul li{
+	text-align: center;
+	line-height: 25px;
+	height: 25px;
+	width: 100%;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: gainsboro;
+}
+#wraper .wrap .operat .select .area .areamenu ul li:hover{
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+#wraper .wrap .operat .select .area .selected{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#wraper .wrap .operat .select .area .selected p{
+	position: absolute;
+	left: 10%;
+	color: black;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#wraper .wrap .operat .select .area .selected .down{
+	position: absolute;
+	right: 8%;
+	top: 50%;
+	cursor: pointer;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	
+}
+#wraper .wrap .operat .timeselect{
+	width: 22%;
+	height: 70%;
+	float: right;
+	box-sizing: border-box;
+	padding: 5px 0;
+	position: relative;
+}
+
+
+#wraper .wrap .operat .timeselect p{
+	float: left;
+	margin-left: 5px;
+	
+}
+#wraper .wrap .operat .timeselect .times input{
+	border: none;
+	outline: none;
+	background-color: transparent;
+	width: 90%;
+	text-indent: 10px;
+	height: 100%;
+}
+
+#wraper .wrap .operat .timeselect p span.down{
+	margin-left: 5px;
+	cursor: pointer;
+}
+#wraper .wrap .operat .timeselect p.starttime{
+	width: 34%;
+	box-sizing: border-box;
+	
+	border: 1px solid #0066FF;
+}
+#wraper .wrap .operat .timeselect p.endtime{
+	width: 34%;
+	box-sizing: border-box;
+	
+	border: 1px solid #0066FF;
+}
+
+#wraper .wrap .tap{
+	width: 100%;
+	height: 75%;
+	box-sizing: border-box;
+	
+	padding: 0 1.6%;
+}
+#wraper .wrap .tap div{
+	/*width: 18.59%;*/
+	width:18.4%;
+	height: 45%;
+	float: left;
+	/*background-color: deeppink;*/
+	margin: 0 1.8% 1.8% 0;
+	overflow: hidden;
+	border-radius: 5px;
+}
+#wraper .wrap .tap div.last{
+	margin-right: 0;
+}
+#wraper .wrap .tap .checklist img:hover{
+	
+	 /* box-shadow: 0px 0px 30px 30px rgba(0,102,255,1); */
+	/*box-shadow: 0px 0px 30px #fff;*/
+    cursor: pointer;  
+}
+
+#wraper .wrap .tap div img{
+	width: 100%;
+	height: 74.28%;
+	box-sizing: border-box;
+}
+#wraper .wrap .tap div img.imgs{
+	display: block;
+	border: 2px solid #62acff;
+	border-radius: 6px;
+}
+
+#wraper .wrap .tap p{
+	color: black;
+	font-size: 16px;
+	text-align: center;
+	/*line-height: 35px;*/
+	margin-top: 10px;
+}
+#wraper .wrap .tap p span{
+	color: #62acff;
+	padding:0 5px;
+	/*background-color: #62acff;*/
+}
+#wraper .wrap .footer{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #71757b;
+	font-size: 18px;
+}
+
+
+
+

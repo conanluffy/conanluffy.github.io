@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI,CACA,KAAK,CAAE,KAAK,CACZ,MAAC,CACG,SAAS,CAAE,IAAI",
+"sources": ["../../scss/downmenu.scss"],
+"names": [],
+"file": "downmenu.css"
+}

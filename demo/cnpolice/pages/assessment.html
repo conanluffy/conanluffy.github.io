@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>长宁区实有人口数据分析考核系统</title>
+	<link rel="stylesheet" type="text/css" href="../css/libs/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/pages/assessment.css">
+	<script src="../js/libs/jquery-2.2.3.min.js"></script>
+	<script src="../js/libs/echarts.min.js"></script>
+</head>
+<body>
+	<div id="=wrapMain" class="container-fluid">
+		<div id="wrapHead">
+			<img src="../images/image1/headImage2.png">
+			<span class="title">
+				长宁区实有人口数据分析考核系统
+			</span>
+			<div class="userinfo">
+				<div class="userimg"><img src="../images/image1/headImage2.png"></div>
+				<div class="username">admin</div>
+				<div class="quit">
+					<p class="gap"></p>
+					<span class="quitcontent">退出</span>
+				</div>
+			</div>
+		</div>
+		<div id="wrapContent">
+			<div id="wrapContent-title">
+				<span id="backIndex">返回主页</span>
+				<div class="dropdown">
+					<button class="dropbtn">
+						<span id="dropbtn-content">首次来沪人员占比统计表</span>
+						<img src="../images/page2/down.png">
+					</button>
+					<div class="dropdown-content">
+						<a class="dropdown-item">1、首次来沪人员占比</a>
+						<a class="dropdown-item">2、反复新增注销3次（含）以上</a>
+						<a class="dropdown-item">3、来沪人员变动数占来沪人员总数比(半年考核）</a>
+						<a class="dropdown-item">4、来沪人员新增数占来沪人员总数比</a>
+						<a class="dropdown-item">5、来沪人员注销数占来沪人员总数比</a>
+						<a class="dropdown-item">6、信息质量（无人居住房整治率）</a>
+						<a class="dropdown-item">7、异常数据</a>
+						<a class="dropdown-item">8、工作量达标</a>
+						<a class="dropdown-item">9、二个月无变动的无人居住房占比</a>
+						<a class="dropdown-item">10、来沪人员新增绝对值</a>
+					</div>
+				</div>
+				<div id="sheet-chart">
+					<div id="chart"><img src="../images/page2/chart.png"></div>
+					<div id="sheet"><img src="../images/page2/sheet.png"></div>
+				</div>
+			</div>
+			<div id="wrapContent-content">
+				<div class="alltable">
+					<div id="firstSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="secondSheet">
+						<table>
+							<tr class="table-title">
+								<td class="firstRow">序号</td>
+								<td class="firstRow">街镇</td>
+								<td class="firstRow">居委</td>
+								<td class="firstRow">姓名</td>
+								<td class="firstRow">身份证号</td>
+								<td class="firstRow">新增次数</td>
+								<td class="firstRow">注销次数</td>
+								<td class="firstRow">合计人数</td>
+								<td class="firstRow">扣分</td>
+							</tr>
+							<tbody id="tablelsw2"></tbody>
+						</table>
+						<footer id="table-action2" class="table-action">
+							<span id="spanFirst2" class="spanFirst">首页</span>&nbsp;&nbsp;
+							<span id="spanPre2" class="spanPre">上一页</span>&nbsp;&nbsp;
+							<span id="spanNext2" class="spanNext">下一页</span>&nbsp;&nbsp;
+							<span id="spanLast2" class="spanLast">尾页</span>&nbsp;&nbsp;
+							第<span id="spanPageNum2" class="spanPageNum"></span>页/共<span id="spanTotalPage2" class="spanTotalPage"></span>页
+						</footer>
+					</div>
+					<div id="thirdSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="fourthSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="fifthSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="sixthSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="seventhSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="eighthSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="ninethSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+					<div id="tenthSheet" class="wrap-sheet">
+						<table></table>
+					</div>
+				</div>
+				<div class="allcharts">
+					<chart id="firstChart" class="wrap-chart"></chart>
+					<chart id="secondChart" class="wrap-chart"></chart>
+					<chart id="thirdChart" class="wrap-chart"></chart>
+					<chart id="fourthChart" class="wrap-chart"></chart>
+					<chart id="fifthChart" class="wrap-chart"></chart>
+					<chart id="sixthChart" class="wrap-chart"></chart>
+					<chart id="seventhChart" class="wrap-chart"></chart>
+					<chart id="eighthChart" class="wrap-chart"></chart>
+					<chart id="ninethChart" class="wrap-chart"></chart>
+					<chart id="tenthChart" class="wrap-chart"></chart>
+				</div>
+			</div>
+		</div>
+		<div class="popup">
+			<center>
+				<div class="popup-content">
+					<div class="title">
+						<span class="title-content">
+						</span>
+						<span id="close-popup"><img src="../images/page2/close.png"></span>
+					</div>
+					<table>
+						<tr class="table-title"></tr>
+						<tbody id="tablelsw"></tbody>
+					</table>
+					<div id="table-action" class="table-action">
+						<span id="spanFirst" class="spanFirst">首页</span>&nbsp;&nbsp;
+						<span id="spanPre" class="spanPre">上一页</span>&nbsp;&nbsp;
+						<span id="spanNext" class="spanNext">下一页</span>&nbsp;&nbsp;
+						<span id="spanLast" class="spanLast">尾页</span>&nbsp;&nbsp;
+						第<span id="spanPageNum" class="spanPageNum"></span>页/共<span id="spanTotalPage" class="spanTotalPage"></span>页
+					</div>
+				</div>
+			</center>
+		</div>
+	</div>
+	<script src="../js/pages/assessment.sheet.js"></script>
+	<script src="../js/pages/assessment.chart.js"></script>
+	<script src="../js/pages/assessment.popup.js"></script>
+	<script src="../js/pages/assessment.js"></script>
+</body>
+</html>

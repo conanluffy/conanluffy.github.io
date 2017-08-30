@@ -1,0 +1,831 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#wraper{
+	width: 100%;
+	height: 100%;
+	background: url(../../images/newstyle/pagebg.png) no-repeat;
+	background-size: 100% 100%;
+}
+#wraper .wrap{
+	width: 100%;
+	height: 100%;
+	/*padding-top:5.2% ;
+	box-sizing: border-box;*/
+	overflow: hidden;
+	position: relative;
+}
+#wraper .wrap .headtop{
+	width: 100%;
+	height: 8%;
+	position: relative;
+	background: url(../../images/image1/headImage.png) no-repeat;
+	background-size: 100% 100%; 
+	margin-bottom: 1%;
+}
+#wraper .wrap .headtop .system{
+	width: 80%;
+	height: 100%;
+	position: relative;
+}
+#wraper .wrap .headtop .system .systempic{
+	position:absolute;
+	width: 50px;
+	height: 50px;
+	left: 1.6%;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#wraper .wrap .headtop .system .systempic img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#wraper .wrap .headtop .system .systemname{
+	position: absolute;
+	font-size: 26px;
+	color: white;
+	left: 1.6%;
+	top: 50%;
+	-webkit-transform: translate(70px,-50%);
+	transform: translate(70px,-50%);
+	
+}
+#wraper .wrap .userinfor{
+	position: absolute;
+	width: 7.3%;
+	height: 100%;
+	/*background-color: deeppink;*/
+	top: 0;
+	right: 20px;
+	cursor: pointer;
+}
+#wraper .wrap .userinfor .userimg{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #ccc;
+	
+}
+#wraper .wrap .userinfor .username{
+	position: absolute;
+	font-size: 16px;
+	color: white;
+	left: 60px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+/* #wraper .wrap .userinfor .showquit{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+} */
+#wraper .wrap .userinfor .quit{
+	position: absolute;
+	z-index: 100;
+	/* right: 10px; */
+	left: 25px;
+	bottom: -20px;
+	-webkit-transform: translate(-50%,100%);
+	transform: translate(-50%,100%);
+	
+	/* padding: 5px; */
+	display: none;
+}
+#wraper .wrap .userinfor .quit p{
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-bottom: 20px solid #62acff;
+	border-right: 10px solid transparent;
+	position: absolute;
+	/*top: -5px;*/
+	top: 0px;
+	left: 50%;
+	-webkit-transform: translate(-50%,100%);
+	transform: translate(-50%, -100%);
+}
+#wraper .wrap .userinfor .quit .quitcontent{
+	/*padding: 3px 10px;*/
+	background-color: #62acff;
+	cursor: pointer;
+	/*background-color: #ccc;*/
+	color: white;
+}
+#wraper .wrap .userinfor .quit .quitcontent li{
+	padding: 5px;
+	text-align: center;
+}
+#wraper .wrap .userinfor .quit .quitcontent li:hover{
+	background-color: #ccc;
+	/*color: black;*/
+}
+
+#wraper .wrap .pop_ups{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	overflow: hidden;
+	display: none;
+}
+#wraper .wrap .pop_ups .pops{
+	z-index: 199;
+	position: relative;
+}
+
+#wraper .wrap .pop_ups .pops .popups_title{
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background-color: #62acff;
+	
+}
+#wraper .wrap .pop_ups .pops .popups_title .poptitle{
+	
+	color: white;
+	font-size: 18px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+#wraper .wrap .pop_ups .pops .popups_title .close{
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	cursor: pointer;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#wraper .wrap .pop_ups .pops .table_content{
+	width: 90%;
+	height:80%;
+	margin: 10px auto;
+	/*background-color: orangered;*/
+	box-sizing: border-box;
+	overflow: hidden;
+}
+#wraper .wrap .pop_ups .pops .table_content .tables{
+	width: 100%;
+	height: 90%;
+}
+#wraper .wrap .pop_ups .pops .table_content table{
+	width: 100%;
+	height: 100%;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+#wraper .wrap .pop_ups .pops .table_content table tr td{
+	text-align: center;
+	font-size: 16px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+#wraper .wrap .pop_ups .pops .table_content .pagination{
+	margin-top: 20px;
+	text-align: center;
+}
+#wraper .wrap .pop_ups .pops .table_content .pagination span{
+	padding: 6px 10px;
+	cursor: pointer;
+}
+#wraper .wrap .pop_ups .pops .table_content .pagination span.current{
+	padding-right: 0;
+}
+#wraper .wrap .pop_ups .pops .table_content .pagination span.allpage{
+	padding-left: 0;
+}
+#wraper .wrap .pop_ups .pops .table_content .pagination span.currentpage{
+	padding:5px;
+}
+#wraper .wrap .pop_ups .pops .table_content .pagination span.allpages{
+	padding:5px;
+}
+
+#wraper .wrap .pop_ups .pops .table_content .pagination span.active{
+	background-color: #62acff;
+}
+
+
+
+#wraper .wrap .pop_ups .frist_pop .table_content table tr{
+	height: 10%;
+}
+/*#wraper .wrap .pop_ups .frist_pop .table_content table tr td{
+	width: 33%;
+}*/
+
+/*首次来沪人员*/
+#wraper .wrap .pop_ups .frist_pop{
+	width: 50%;
+	height:70%;
+	margin: 8% auto;
+	background-color: white;
+	
+	display: none;
+}
+
+/* 反复新增注销弹窗 */
+#wraper .wrap .pop_ups .repeat_pop{
+	width: 80%;
+	height: 63%;
+	margin: 7% auto;
+	background-color: white;
+	display: none;
+}
+
+/* #wraper .wrap .repeat_pop .table_content .tables table tr{
+	width: 100%;
+	height: 9%;
+
+} */
+
+
+/* 来沪人员变动数占来沪人员总数比*/
+#wraper .wrap .pop_ups .change_pop{
+	width: 40%;
+	height: 70%;
+	margin: 7% auto;
+	background-color: white;
+	display: none;
+}
+
+/* 来沪人员新增数占来沪人员总数比 */
+#wraper .wrap .pop_ups .add_pop{
+	width: 50%;
+	height:70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+/* 来沪人员注销数占比 */
+#wraper .wrap .pop_ups .del_pop{
+	width: 36%;
+	height:70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+/* 无人居住房整治率 */
+#wraper .wrap .pop_ups .house_pop{
+	width:56%;
+	height: 70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+/* 来沪人员照片异常数据 */
+/*#wraper .wrap .pop_ups .pic_pop{
+	width:30%;
+	height: 70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}*/
+/* 异常数据 */
+#wraper .wrap .pop_ups .unusual_pop{
+	width:46%;
+	height: 70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+
+/* 人口信息采集工作量 */
+#wraper .wrap .pop_ups .colle_pop{
+	width: 70%;
+	height: 70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+
+#wraper .wrap .pop_ups .twomonth_pop{
+	width: 56%;
+	height: 70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+
+/* 来沪人员新增 */
+#wraper .wrap .pop_ups .absolut_pop{
+	width: 80%;
+	height: 70%;
+	margin: 8% auto;
+	background-color: white;
+	display: none;
+}
+
+#wraper .wrap .top_content{
+	box-sizing: border-box;
+	width: 97.9%;
+	/*height: 60%;*/
+	height: 85%;
+	margin: 0 auto;
+	background-color: #f7f8f9;
+}
+
+
+
+#wraper .wrap .top_content .data_sheet{
+	
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 5px;
+	/*display: none;*/
+}
+#wraper .wrap .top_content .data_sheet .title{
+	width: 100%;
+	height: 6.18%;
+	font-size: 16px;
+	color: white;
+	background-color: #62acff;
+	position: relative;
+	
+}
+#wraper .wrap .top_content .data_sheet .title .title_celec{
+	position: absolute;
+	/*width: 30%;*/
+	top: 50%;
+	left: 50%;
+	cursor: pointer;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+#wraper .wrap .top_content .data_sheet .title .back{
+	position: relative;
+	width: 6%;
+	height: 100%;
+	cursor: pointer;
+}
+#wraper .wrap .top_content .data_sheet .title .back p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	
+}
+
+#wraper .wrap .top_content .data_sheet .title .showtype{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 160px;
+	height: 100%;
+	cursor: pointer;
+}
+
+#wraper .wrap .top_content .data_sheet .title .showtype span{
+	float: left;
+	width: 80px;
+	height: 100%;
+	position: relative;
+	box-sizing: border-box;
+	
+}
+
+#wraper .wrap .top_content .data_sheet .title .showtype span.active{
+	background-color: #0170ed;
+}
+#wraper .wrap .top_content .data_sheet .title .showtype span img{
+	position: absolute;
+	left:50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+#wraper .wrap .top_content .data_sheet .loading{
+	width: 100%;
+	height: 91%;
+	background: url(../images/newstyle/loading.gif) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+}
+
+#wraper .wrap .top_content .data_sheet .alltable{
+	width: 100%;
+	height: 91%;
+	/*display: none;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable table{
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	color: black;
+	box-sizing: border-box;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#wraper .wrap .top_content .data_sheet .alltable table tbody tr td{
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+
+/*#wraper .wrap .top_content .data_sheet .alltable table  td.borderBottom{
+	border-bottom: 1px solid #ccc;
+}
+#wraper .wrap .top_content .data_sheet .alltable table  td.borderRight{
+	border-right: 1px solid #ccc;
+}*/
+#wraper .wrap .top_content .data_sheet .alltable table  td{
+	text-align: center;
+}
+
+
+
+#wraper .wrap .top_content .data_sheet .alltable table .trs:nth-of-type(odd){
+	background-color: #e7ecf6;
+}
+#wraper .wrap .top_content .data_sheet .alltable table .trs:hover{
+	background-color: #62acff !important;
+	cursor: pointer;
+	/*color: white;*/
+	
+}
+
+/*人口信息采集工作量达标统计表*/
+#wraper .wrap .top_content .data_sheet .alltable .information_collection{
+	
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .information_collection tr{
+	width: 100%;
+	/*height: 11.11%;*/
+	
+}
+
+
+#wraper .wrap .top_content .data_sheet .alltable .information_collection  tr td{
+	
+	width: 10%;
+}
+
+
+
+/*首次来沪人员占比统计表*/
+
+#wraper .wrap .top_content .data_sheet .alltable .fristcome_proportion{
+	display: none;
+}
+
+#wraper .wrap .top_content .data_sheet .alltable .fristcome_proportion tr{
+	width: 100%;
+	/*height: 12.5%;*/
+}
+
+#wraper .wrap .top_content .data_sheet .alltable .fristcome_proportion tr td{
+	width: 10%;
+}
+
+/*反复新增注销*/
+
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel{
+	width: 100%;
+	height: 100%;
+	display: none;
+	
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tbody{
+	width: 100%;
+	height: 90%;
+	overflow: hidden;
+	/* height: 500px; */
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tbody .trs:nth-child(odd){
+ background-color: white;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tbody .trs:nth-child(even){
+	background-color: #e7ecf6;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tbody .trs td:nth-child(5){
+	cursor: pointer;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tfoot{
+	width: 100%;
+	height: 10%;
+	line-height: 48px;
+}
+
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tbody tr{
+	width: 100%;
+	/*height: 10%;*/
+}
+
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel tbody tr .totle{
+	background-color: white;
+	/*border: 1px solid #ccc;*/
+}
+/*#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation tr td{
+	width: 100%;
+}*/
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation span{
+	padding: 6px 10px;
+	cursor: pointer;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation span.current{
+	padding-right:0;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation span.allpage{
+	padding-left:0;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation span.currentpage{
+	padding:5px;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation span.allpages{
+	padding:5px;
+}
+#wraper .wrap .top_content .data_sheet .alltable .repeat_addanddel .table_pagenation span.active{
+	background-color: #62acff;
+}
+
+
+
+
+/*来沪人员变动数占来沪人员总数比*/
+#wraper .wrap .top_content .data_sheet .alltable .change_rate{
+	display: none;
+}
+
+#wraper .wrap .top_content .data_sheet .alltable .change_rate tr{
+	width: 100%;
+	/*height: 12.5%;*/
+	/*box-sizing: border-box;*/
+	/*padding: 0 1px;*/
+	
+}
+#wraper .wrap .top_content .data_sheet .alltable .change_rate tr td{
+	width: 11.11%;
+	
+}
+
+
+/*来沪人员新增数占来沪人员总数比统计表*/
+#wraper .wrap .top_content .data_sheet .alltable .add_rate{
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .add_rate tr{
+	width: 100%;
+	/*height: 12.5%;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable .add_rate tr td{
+	width: 10%;
+}
+
+/*来沪人员注销数占来沪人员总数比*/
+
+#wraper .wrap .top_content .data_sheet .alltable .del_rate{
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .del_rate tr{
+	width: 100%;
+	/*height: 12.5%;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable .del_rate tr td{
+	width: 10%;
+}
+
+/*无人居住房整治率统计表*/
+#wraper .wrap .top_content .data_sheet .alltable .house_control{
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .house_control tr{
+	width: 100%;
+	/*height: 12.5%;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable .house_control tr td{
+	width: 11.11%;
+}
+
+/*来沪人员照片质量统计表*/
+#wraper .wrap .top_content .data_sheet .alltable .twomonth{
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .twomonth tr{
+	width: 100%;
+	/*height: 12.5%;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable .twomonth .trs:nth-child(odd){
+ background-color: white;
+}
+#wraper .wrap .top_content .data_sheet .alltable .twomonth .trs:nth-child(even){
+	background-color: #e7ecf6;
+}
+#wraper .wrap .top_content .data_sheet .alltable .twomonth tr td{
+	width: 16.6%;
+}
+
+/*异常数据统计表*/
+#wraper .wrap .top_content .data_sheet .alltable .unusual_data{
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .unusual_data tr{
+	width: 100%;
+	/*height: 12.5%;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable .unusual_data tr td{
+	width: 20%;
+}
+
+/*来沪人员新增绝对值统计表*/
+
+#wraper .wrap .top_content .data_sheet .alltable .add_absolute{
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .alltable .add_absolute tr{
+	width: 100%;
+	/*height: 11.11%;*/
+}
+#wraper .wrap .top_content .data_sheet .alltable .add_absolute tr td{
+	width: 9.09%;
+}
+
+
+
+
+
+
+
+
+
+#wraper .wrap .top_content .data_sheet .downmenu{
+	position: absolute;
+	width: 38.93%;
+	/*height: 69.4%;*/
+	/*height: 438px;*/
+	height: 0;
+	top: 7%;
+	left: 50%;
+	background-color: #62acff;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 100;
+}
+#wraper .wrap .top_content .data_sheet .downmenu ul{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 7%;
+	cursor: pointer;
+}
+#wraper .wrap .top_content .data_sheet .downmenu ul li{
+	height: 10%;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+	text-align: center;
+	line-height: 100%;
+	color: #ccc;
+	position: relative;
+}
+
+#wraper .wrap .top_content .data_sheet .downmenu ul li.active{
+	color: white;
+	border-bottom: 1px solid white;
+}
+#wraper .wrap .top_content .data_sheet .downmenu ul li.last{
+	border: none;
+}
+#wraper .wrap .top_content .data_sheet .downmenu ul li p{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+#wraper .wrap .top_content .data_sheet .allcharts{
+	width: 100%;
+	height: 91.6%;
+	box-sizing: border-box;
+	padding: 20px; 
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .allcharts .type1{
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+#wraper .wrap .top_content .data_sheet .allcharts .type2{
+	width: 100%;
+	height: 100%;
+}
+
+
+#wraper .wrap .top_content .data_sheet .allcharts .charts{
+	width: 49.3%;
+	height: 100%;
+	padding: 1%;
+	box-sizing: border-box;
+	
+}
+#wraper .wrap .top_content .data_sheet .allcharts .charts .chart_check{
+	width: 100%;
+	height: 6.8%;
+}
+
+#wraper .wrap .top_content .data_sheet .allcharts .charts .chart_check span{
+	float: left;
+}
+#wraper .wrap .top_content .data_sheet .allcharts .charts .chart_check span.shu{
+	width: 10px;
+	height: 20px;
+	background-color: #62acff;
+}
+#wraper .wrap .top_content .data_sheet .allcharts .charts .chart_check span.check_tab{
+	font-size: 16px;
+	margin-left: 10px;
+	font-weight: bold;
+}
+#wraper .wrap .top_content .data_sheet .allcharts .charts .charts_box{
+	width: 100%;
+	height: 93%;
+	background-color: white;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 2%;
+	box-shadow:0 0 10px #CCC;  ;
+	overflow: hidden;
+}
+#wraper .wrap .top_content .data_sheet .allcharts .charts .charts_box table{
+	width: 100%;
+	height: 15%;
+	border-right: 1px solid #62acff;
+	border-bottom: 1px solid #62acff;
+}
+
+#wraper .wrap .top_content .data_sheet .allcharts .charts .charts_box table td{
+	border-left: 1px solid #62acff;
+	border-top: 1px solid #62acff;
+	text-align: center;
+}
+
+#wraper .wrap .top_content .data_sheet .allcharts .chart_left{
+	
+	float: left;
+	/*background-color: deeppink;*/
+}
+#wraper .wrap .top_content .data_sheet .allcharts .chart_left #sheet1{
+	width: 100%;
+	height: 82%;
+	margin-top: 10px;
+	/* background-color: deeppink; */
+}
+
+#wraper .wrap .top_content .data_sheet .allcharts .chart_right{
+	
+	float: right;
+	/*background-color: orangered;*/
+}
+#wraper .wrap .top_content .data_sheet .allcharts .chart_right #sheet2{
+	width: 100%;
+	height: 82%;
+	margin-top: 10px;
+	/* background-color: orangered; */
+}
+
+#wraper .wrap .top_content .data_sheet .allcharts .type2 #sheet3{
+	width: 100%;
+	height: 82%;
+	margin-top: 10px;
+	/* background-color: cyan; */
+}
+#wraper .wrap .top_content .data_sheet .allcharts .type2 .onechart{
+	float: none;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

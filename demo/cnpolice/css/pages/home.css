@@ -1,0 +1,276 @@
+﻿body,html {
+
+	width: 100%;
+	height: 100%;
+	background-color:#EBF0F4;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+td {
+	padding: 0 0.3vw;
+}
+.container-fluid  {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/*标题部分*/
+#wrapHead {
+	position: relative;
+	width: 100%;
+	height: 8%;
+	background: url(../../images/image1/headImage.png) no-repeat;
+	background-size: 100% 100%;
+}
+#wrapHead img {
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	height: 6.5vh;
+}
+#wrapHead .title {
+	position: absolute;
+	top: 20%;
+	left: 6%;
+	font-size: 4vh;
+	font-weight: bold;
+	letter-spacing: 2px;
+	line-height: 4.5vh;
+	color: #fff;	
+}
+#wrapHead .userinfo {
+	position: absolute;
+	top: 0;
+	right: 2%;
+	width: 8%;
+	height: 100%;
+	cursor: pointer;
+}
+#wrapHead .userinfo .userimg {
+	position: absolute;
+	left: 0;
+	display: block;
+	height: 100%;
+}
+#wrapHead .userinfo .userimg img {
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	height: 6.5vh;
+	border-radius: 50%;
+}
+#wrapHead .userinfo .username{
+	position: absolute;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	line-height: 8vh;
+	font-size: 2.2vh;
+	color: #fff;
+}
+#wrapHead .userinfo .quit{
+	position: absolute;
+	z-index: 1000;
+	left: 25px;
+	bottom: -20px;
+	transform: translate(-50%,100%);
+	display: none;
+}
+#wrapHead .userinfo .quit p{
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-bottom: 20px solid white;
+	border-right: 10px solid transparent;
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	transform: translate(-50%, -100%);
+}
+#wrapHead .userinfo .quit .quitcontent{
+	padding: 5px;
+	background-color: white;
+	cursor: pointer;
+}
+/*主体部分*/
+#wrapContent {
+	position: relative;
+	height: 88%;
+	width: 98%;
+	margin: 1%;
+}
+/*左边派出所排名*/
+#left {
+	position: absolute;
+	left: 0;
+	width: 24%;
+	height: 100%;
+	background-color: #fff;
+	box-shadow:0 0 5px #ccc;
+	padding-bottom: 10px;
+}
+#left-title {
+	width: 100%;
+	height: 6%;
+	font-size: 2.3vh;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 5.6vh;
+	background-color: #62acff;
+	color: #fff;
+}
+#left-content {
+	width: 100%;
+	height: 94.5%;
+}
+#left-content table {
+	width: 100%;
+	height: 100%;
+}
+#left-content .first-row {
+	width: 100%;
+	height: 8%;
+	font-size: 2.1vh;
+	font-weight: bold;
+	/*line-height: 60px;*/
+	color: #666;
+}
+#left-content .one,
+#left-content .three {
+	width: 20%;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+}
+#left-content .two {
+	width: 60%;
+	font-size: 2vh;
+	font-weight: bold;
+	text-align: center;
+}
+#left-content .sheet-data span {
+	display: inline-block;
+	width: 3.5vh;
+	height: 3.5vh;
+	border-radius: 2vh;
+	font-size: 2.1vh;
+	font-weight: bold;
+	text-align: center;
+	line-height: 3.5vh;
+	color: #fff;
+}
+
+#left-content .bgimage {
+	width: 100%;
+	height: 1%;
+}
+#left-content .bgimage img {
+	position: absolute;
+	left: 5%;
+	width: 90%;
+	/*height: 5px;*/
+}
+/*右边评分表*/
+#right {
+	position: absolute;
+	left: 25%;
+	width: 75%;
+	height: 100%;
+	/*box-shadow:0 0 5px #ccc;*/
+}
+#right-title {
+	width: 100%;
+	height: 6%;
+	font-size: 2.3vh;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-align: center;
+	line-height: 6vh;
+	background-color: #62acff;
+	color: #fff;
+}
+#right-content {
+	width: 100%;
+	height: 87%;
+	font-size: 1.8vh;
+	box-shadow: 0 0 5px #ccc;
+	background-color: #fff;
+}
+#right-content table {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+#right-content td {
+	border: 1px solid #ccc;
+	text-align: center;
+}
+#right-content .first-row {
+	height: 16%;
+	font-weight: bold;
+}
+#right-content .transformer:hover {
+	color: #fff;
+	background-color: #62acff;
+	cursor: pointer;
+}
+#right-content .one,
+#right-content .two,
+#right-content .three,
+#right-content .four,
+#right-content .five,
+#right-content .six,
+#right-content .eight {
+	width: 8.5%;
+}
+#right-content .seven,
+#right-content .nine,
+#right-content .ten,
+#right-content .elven {
+	width: 8%;
+}
+#right-content .sheet-data {
+	/*height: 7%;*/
+	cursor: pointer;
+}
+.oddtr {
+	background: #e7ecf6;
+}
+#right-content .sheet-data:hover {
+	color: #fff;
+	background: #62acff;
+}
+#right-content .sheet-data .first {
+	position: relative;
+	/*padding-left: 50px;*/
+	font-weight: bold;
+	white-space: nowrap;
+	text-align: center;
+	cursor: pointer;
+}
+#right-content .sheet-data .first img {
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	height: 60%;
+}
+#right-content .sheet-data .score {
+	font-size: 2.3vh;
+	font-weight: bold;
+	color: #0179ff;
+}
+#footer {
+	width: 100%;
+	height: 5%;
+	margin-top: 1%;
+	padding-left: 10px;
+	box-shadow:0 0 5px #ccc;
+	font-size: 1.8vh;
+	letter-spacing: 2px;
+	text-align: left;
+	line-height: 5vh;
+	background-color: #fff;
+}
