@@ -8,7 +8,7 @@ var menu = [
     ],
     ['网页小部件',
         ['demo/component/101/index.html', '简易电子时钟'],
-        ['demo/component/201/index.html', '绘制七巧板'],
+        // ['demo/component/201/index.html', '绘制七巧板'],
         // ['ife/task_3_33_1.html', 'SVG 实践'],
         // ['ife/task_3_38_1.html', '排序表格'],
         // ['ife/task_3_39_1.html', '首行冻结的表格'],
@@ -24,12 +24,12 @@ var menu = [
     ['小项目',
         ['demo/cnpolice/pages/login.html','长宁区实有人口']
     ],
-    ['Vue 相关', 
-        ['components/cssfilter/app/index.html', 'Filter生成器']
-    ],
-    ['Node 相关', 
-        ['https://github.com/conanluffy/conanluffy.github.io', '一个博客']
-    ]
+    // ['Vue 相关', 
+    //     ['components/cssfilter/app/index.html', 'Filter生成器']
+    // ],
+    // ['Node 相关', 
+    //     ['https://github.com/conanluffy/conanluffy.github.io', '一个博客']
+    // ]
 ];
 var list = "";
 for (var i = 0; i < menu.length; i++) {
