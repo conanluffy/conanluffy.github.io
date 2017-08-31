@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NBA金州勇士队数据统计</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<script type="text/javascript" src="../js/echarts.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div id="first" style="float: left; width: 700px; height: 500px;">
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById("first"));
+			var option = {
+				title : {
+					text: '场均上场时间占比',
+					subtext: '数据来源：数据nba',
+					sublink: 'http://www.stat-nba.com/team/GSW.html',
+					x:'center'
+				},
+				tooltip : {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					left: 'left',
+					data: ['斯蒂芬-库里','凯文-杜兰特','克莱-汤普森','德雷蒙德-格林','安德烈-伊格达拉','伊恩-克拉克','贾维尔-麦基','扎扎-帕楚里亚','马特-巴恩斯','肖恩-利文斯顿','大卫-韦斯特','帕特里克-麦考','詹姆斯-迈克尔-麦卡杜','凯文-卢尼','达米安-琼斯','布里安特-韦伯','安德森-瓦莱乔']
+				},
+				series : [
+				{
+					name: '访问来源',
+					type: 'pie',
+					radius : '55%',
+					center: ['60%', '60%'],
+					data:[
+					{name:'克莱-汤普森',value:33.9},
+					{name:'斯蒂芬-库里',value:33.4},
+					{name:'凯文-杜兰特',value:33.4},
+					{name:'德雷蒙德-格林',value:32.6},
+					{name:'安德烈-伊格达拉',value:26.3},
+					{name:'马特-巴恩斯',value:20.6},
+					{name:'扎扎-帕楚里亚',value:18.1},
+					{name:'肖恩-利文斯顿',value:17.7},
+					{name:'帕特里克-麦考',value:15.2},
+					{name:'伊恩-克拉克',value:14.8},
+					{name:'大卫-韦斯特',value:12.6},
+					{name:'贾维尔-麦基',value:9.6},
+					{name:'詹姆斯-迈克尔-麦卡杜',value:8.8},
+					{name:'达米安-琼斯',value:8.6},
+					{name:'凯文-卢尼',value:8.4},
+					{name:'布里安特-韦伯',value:6.6},
+					{name:'安德森-瓦莱乔',value:6.5}
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}
+				]
+			};
+			myChart.setOption(option);
+		</script>
+	</div>
+	<div id="second" style="float: right; width: 700px; height: 500px;">
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById("second"));
+			var option = {
+				title : {
+					text: '场均得分占比',
+					subtext: '数据来源：数据nba',
+					sublink: 'http://www.stat-nba.com/team/GSW.html',
+					x:'center'
+				},
+				tooltip : {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					left: 'left',
+					data: ['斯蒂芬-库里','凯文-杜兰特','克莱-汤普森','德雷蒙德-格林','安德烈-伊格达拉','伊恩-克拉克','贾维尔-麦基','扎扎-帕楚里亚','马特-巴恩斯','肖恩-利文斯顿','大卫-韦斯特','帕特里克-麦考','詹姆斯-迈克尔-麦卡杜','凯文-卢尼','达米安-琼斯','布里安特-韦伯','安德森-瓦莱乔']
+				},
+				series : [
+				{
+					name: '访问来源',
+					type: 'pie',
+					radius : '55%',
+					center: ['60%', '60%'],
+					data:[
+					{name:'斯蒂芬-库里',value:25.3},
+					{name:'凯文-杜兰特',value:25.1},
+					{name:'克莱-汤普森',value:22.3},
+					{name:'德雷蒙德-格林',value:10.2},
+					{name:'安德烈-伊格达拉',value:7.6},
+					{name:'伊恩-克拉克',value:6.8},
+					{name:'扎扎-帕楚里亚',value:6.1},
+					{name:'贾维尔-麦基',value:6.1},
+					{name:'马特-巴恩斯',value:5.7},
+					{name:'肖恩-利文斯顿',value:5.1},
+					{name:'大卫-韦斯特',value:4.6},
+					{name:'帕特里克-麦考',value:4},
+					{name:'詹姆斯-迈克尔-麦卡杜',value:2.8},
+					{name:'凯文-卢尼',value:2.5},
+					{name:'达米安-琼斯',value:1.9},
+					{name:'布里安特-韦伯',value:1.7},
+					{name:'安德森-瓦莱乔',value:1.3}
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}
+				]
+			};
+			myChart.setOption(option);
+		</script>
+	</div>
+	<div id="third" style="clear: both;float: left; width: 700px; height: 500px;">
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById("third"));
+			var option = {
+				title : {
+					text: '场均助攻占比',
+					subtext: '数据来源：数据nba',
+					sublink: 'http://www.stat-nba.com/team/GSW.html',
+					x:'center'
+				},
+				tooltip : {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					left: 'left',
+					data: ['斯蒂芬-库里','凯文-杜兰特','克莱-汤普森','德雷蒙德-格林','安德烈-伊格达拉','伊恩-克拉克','贾维尔-麦基','扎扎-帕楚里亚','马特-巴恩斯','肖恩-利文斯顿','大卫-韦斯特','帕特里克-麦考','詹姆斯-迈克尔-麦卡杜','凯文-卢尼','达米安-琼斯','布里安特-韦伯','安德森-瓦莱乔']
+				},
+				series : [
+				{
+					name: '访问来源',
+					type: 'pie',
+					radius : '55%',
+					center: ['60%', '60%'],
+					data:[
+					{name:'德雷蒙德-格林',value:7},
+					{name:'斯蒂芬-库里',value:6.6},
+					{name:'凯文-杜兰特',value:4.8},
+					{name:'安德烈-伊格达拉',value:3.4},
+					{name:'马特-巴恩斯',value:2.3},
+					{name:'大卫-韦斯特',value:2.2},
+					{name:'克莱-汤普森',value:2.1},
+					{name:'扎扎-帕楚里亚',value:1.9},
+					{name:'肖恩-利文斯顿',value:1.8},
+					{name:'伊恩-克拉克',value:1.2},
+					{name:'帕特里克-麦考',value:1.1},
+					{name:'安德森-瓦莱乔',value:0.7},
+					{name:'布里安特-韦伯',value:0.7},
+					{name:'凯文-卢尼',value:0.5},
+					{name:'詹姆斯-迈克尔-麦卡杜',value:0.3},
+					{name:'贾维尔-麦基',value:0.2},
+					{name:'达米安-琼斯',value:0}
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}
+				]
+			};
+			myChart.setOption(option);
+		</script>
+	</div>
+	<div id="forth" style="float: right; width: 700px; height: 500px;">
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById("forth"));
+			var option = {
+				title : {
+					text: '场均篮板占比',
+					subtext: '数据来源：数据nba',
+					sublink: 'http://www.stat-nba.com/team/GSW.html',
+					x:'center'
+				},
+				tooltip : {
+					trigger: 'item',
+					formatter: "{a} <br/>{b} : {c} ({d}%)"
+				},
+				legend: {
+					orient: 'vertical',
+					left: 'left',
+					data: ['斯蒂芬-库里','凯文-杜兰特','克莱-汤普森','德雷蒙德-格林','安德烈-伊格达拉','伊恩-克拉克','贾维尔-麦基','扎扎-帕楚里亚','马特-巴恩斯','肖恩-利文斯顿','大卫-韦斯特','帕特里克-麦考','詹姆斯-迈克尔-麦卡杜','凯文-卢尼','达米安-琼斯','布里安特-韦伯','安德森-瓦莱乔']
+				},
+				series : [
+				{
+					name: '访问来源',
+					type: 'pie',
+					radius : '55%',
+					center: ['60%', '60%'],
+					data:[
+					{name:'凯文-杜兰特',value:8.3},
+					{name:'德雷蒙德-格林',value:7.9},
+					{name:'扎扎-帕楚里亚',value:5.9},
+					{name:'马特-巴恩斯',value:4.6},
+					{name:'斯蒂芬-库里',value:4.5},
+					{name:'安德烈-伊格达拉',value:4},
+					{name:'克莱-汤普森',value:3.7},
+					{name:'贾维尔-麦基',value:3.2},
+					{name:'大卫-韦斯特',value:3},
+					{name:'达米安-琼斯',value:2.3},
+					{name:'凯文-卢尼',value:2.3},
+					{name:'肖恩-利文斯顿',value:2},
+					{name:'安德森-瓦莱乔',value:1.9},
+					{name:'詹姆斯-迈克尔-麦卡杜',value:1.7},
+					{name:'伊恩-克拉克',value:1.6},
+					{name:'帕特里克-麦考',value:1.4},
+					{name:'布里安特-韦伯',value:0.6}
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)'
+						}
+					}
+				}
+				]
+			};
+			myChart.setOption(option);
+		</script>
+	</div>
+	<div id="main" style="width: 1000px; height: 750px;margin: 10px auto;">
+		<script type="text/javascript">
+			var myChart = echarts.init(document.getElementById('main'));
+			var option = {
+				title: {
+					text:'库里NBA生涯数据统计图',
+					x:'cneter',
+					subtext: '数据来源：直播吧',
+					sublink: 'https://data.zhibo8.cc/nbaData/player/#/shuju?playerName=%E6%96%AF%E8%92%82%E8%8A%AC-%E5%BA%93%E9%87%8C'
+				},
+				tooltip : {
+					trigger: 'axis',
+					axisPointer: {
+						type: 'cross',
+						label: {
+							backgroundColor: '#6a7985'
+						}
+					}
+				},
+				// ['场数','先发','得分','篮板','助攻','抢断','盖帽','命中','出手','三分命中','三分出手','罚球命中','罚球出手']
+				legend: {
+					data: [
+					{  name: '场数',icon: 'circle'},
+					{  name: '先发',icon: 'circle'},
+					{  name: '得分',icon: 'circle',textStyle: {color: 'red'}},
+					{  name: '篮板',icon: 'circle',textStyle: {color: 'green'}},
+					{  name: '助攻',icon: 'circle',textStyle: {color: 'blue'}},
+					{  name: '抢断',icon: 'circle'},
+					{  name: '盖帽',icon: 'circle'},
+					{  name: '命中',icon: 'circle'},
+					{  name: '出手',icon: 'circle'},
+					{  name: '三分命中',icon: 'circle'},
+					{  name: '三分出手',icon: 'circle'},
+					{  name: '罚球命中',icon: 'circle'},
+					{  name: '罚球出手',icon: 'circle'}],
+					left: 240,
+					width: 700,
+					textStyle: {
+						fontSize: 10
+					}
+				},
+				toolbox: {
+					feature: {
+						saveAsImage: {}
+					}
+				},
+				grid: {
+					left: '3%',
+					right: '4%',
+					bottom: '3%',
+					containLabel: true
+				},
+				xAxis : [
+				{
+					type : 'category',
+					name : '赛季',
+					nameTextStyle : {
+						fontWeight : 'bold'
+					},
+					boundaryGap : false,
+					data : ["2009-10","2010-11","2011-12","2012-13","2013-14","2014-15","2015-16","2016-17"]
+				}
+				],
+				yAxis : [
+				{
+					type : 'value'
+				}
+				],
+				series : [
+				{
+					name:'场数',
+					type:'line',
+					data:[80,74,26,78,78,80,79,79]
+				},
+				{
+					name:'先发',
+					type:'line',
+					data:[77,74,23,78,78,80,79,79]
+				},
+				{
+					name:'得分',
+					type:'line',
+					data:[1399,1373,383,1786,1873,1900,2375,1999]
+				},
+				{
+					name:'篮板',
+					type:'line',
+					data:[356,286,88,314,334,341,430,353]
+				},
+				{
+					name:'助攻',
+					type:'line',
+					data:[472,432,138,539,666,619,527,524]
+				},
+				{
+					name:'抢断',
+					type:'line',
+					data:[152,109,39,126,128,163,169,142]
+				},
+				{
+					name:'盖帽',
+					type:'line',
+					data:[19,20,8,12,14,16,15,17]
+				},
+				{
+					name:'命中',
+					type:'line',
+					data:[528,505,145,626,652,653,805,675]
+				},
+				{
+					name:'出手',
+					type:'line',
+					data:[1143,1053,296,1388,1383,1341,1598,1443]
+				},
+				{
+					name:'三分命中',
+					type:'line',
+					data:[166,151,55,272,261,286,402,324]
+				},
+				{
+					name:'三分出手',
+					type:'line',
+					data:[380,342,121,600,615,646,886,789]
+				},
+				{
+					name:'罚球命中',
+					type:'line',
+					data:[177,212,38,262,308,308,363,325]
+				},
+				{
+					name:'罚球出手',
+					type:'line',
+					data:[200,227,47,291,348,337,400,362]
+				},
+				{
+					name:'三分命中率',
+					type:'line',
+					data:[200,227,47,291,348,337,400,362]
+				},
+				]
+			};
+			myChart.setOption(option);
+		</script>
+	</div>
+</body>
+</html>
