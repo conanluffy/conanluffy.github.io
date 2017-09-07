@@ -1,0 +1,17 @@
+[{"name":"大学英语1（ABC）","KCXZ":"必修","teacher":"卢云","room":"教二楼605","time":"周一第1,2节{第4-18周|双周","weekday":"一","begin_part":"1","end_part":"2","begin_week":"4","end_week":"18","DSZ":"0"},
+{"name":"大学英语1（ABC）","KCXZ":"必修","teacher":"卢云","room":"教二楼605","time":"周一第1,2节{第5-19周|单周}","weekday":"一","begin_part":"1","end_part":"2","begin_week":"5","end_week":"19","DSZ":"1"},
+{"name":"大学英语1（ABC）","KCXZ":"必修","teacher":"卢云","room":"教三楼404","time":"周四第3,4节{第4-18周|双周}","weekday":"四","begin_part":"3","end_part":"4","begin_week":"4","end_week":"18","DSZ":"0"},
+{"name":"大学英语1（ABC）","KCXZ":"必修","teacher":"卢云","room":"综合楼214","time":"周四第3,4节{第5-19周|单周}","weekday":"四","begin_part":"3","end_part":"4","begin_week":"5","end_week":"19","DSZ":"1"},
+{"name":"体育1","KCXZ":"必修","teacher":"体育教师","room":"西区田径场","time":"周二第5,6节{第4-16周}","weekday":"二","begin_part":"5","end_part":"6","begin_week":"4","end_week":"16"},
+{"name":"计算机高级语言程序设计（C）","KCXZ":"必修","teacher":"黄诗勇","room":"教二楼603","time":"周一第5,6节{第7-17周}","weekday":"一","begin_part":"5","end_part":"6","begin_week":"7","end_week":"17"},
+{"name":"计算机高级语言程序设计（C）","KCXZ":"必修","teacher":"黄诗勇","room":"教二楼406","time":"周三第3,4节{第7-16周}","weekday":"三","begin_part":"3","end_part":"4","begin_week":"7","end_week":"416"},
+{"name":"思想道德修养与法律基础1","KCXZ":"必修","teacher":"王明华","room":"教三楼201","time":"周五第5,6节{第5-15周}","weekday":"五","begin_part":"5","end_part":"6","begin_week":"5","end_week":"15"},
+{"name":"高等数学A1","KCXZ":"必修","teacher":"黄精华","room":"教三楼101","time":"周一第3,4节{第4-19周}","weekday":"一","begin_part":"3","end_part":"4","begin_week":"4","end_week":"19"},
+{"name":"高等数学A1","KCXZ":"必修","teacher":"黄精华","room":"教三楼101","time":"周三第1,2节{第4-19周}","weekday":"三","begin_part":"1","end_part":"2","begin_week":"4","end_week":"19"},
+{"name":"高等数学A1","KCXZ":"必修","teacher":"黄精华","room":"教三楼101","time":"周五第3,4节{第4-19周}","weekday":"五","begin_part":"3","end_part":"4","begin_week":"4","end_week":"19"},
+{"name":"线性代数A","KCXZ":"必修","teacher":"向东进","room":"综合楼402","time":"周二第1,2节{第4-18周}","weekday":"二","begin_part":"1","end_part":"2","begin_week":"4","end_week":"18"},
+{"name":"线性代数A","KCXZ":"必修","teacher":"向东进","room":"综合楼402","time":"周四第1,2节{第4-18周}","weekday":"四","begin_part":"1","end_part":"2","begin_week":"4","end_week":"18"},
+{"name":"计算科学导论","KCXZ":"必修","teacher":"唐善玉","room":"综合楼410","time":"周二第3,4节{第4-10周}","weekday":"二","begin_part":"3","end_part":"4","begin_week":"4","end_week":"10"},
+{"name":"计算科学导论","KCXZ":"必修","teacher":"唐善玉","room":"教一楼305","time":"周五第1,2节{第4-10周}","weekday":"五","begin_part":"1","end_part":"2","begin_week":"4","end_week":"10"},
+{"name":"心理学与自我成长","KCXZ":"任选","teacher":"郭兰","room":"综合楼207","time":"周三第7,8节{第4-12周}","weekday":"三","begin_part":"7","end_part":"8","begin_week":"4","end_week":"12"}
+]
