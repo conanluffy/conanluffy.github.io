@@ -1,9 +1,6 @@
 var menu = [
     ['单页面制作',
         ['demo/vigenere.html','维吉尼亚密码'],
-        ['ife/task_1_6/task_1_6.html', '模拟报纸排版'],
-        ['ife/task_1_7/task_1_7.html', '常见的技术产品官网的页面架构及样式布局'],
-        ['ife/task_1_9/index.html', '一个复杂页面'],
         ['demo/warriors.html','NBA金州勇士队数据统计'],
         ['demo/ife/task_1_01_1.html', 'HTML页面'],
         ['demo/ife/task_1_03_1.html', '三栏式布局'],
@@ -11,6 +8,7 @@ var menu = [
         ['demo/ife/task_1_08_1.html', '响应式网格布局'],
         ['demo/ife/task_1_10_1.html', 'Flexbox布局'],
         ['demo/ife/task_1_12_1.html', '一些CSS3新特性'],
+        ['ife/task_1_7/task_1_7.html', '常见的技术产品官网的页面架构及样式布局'],
         ['demo/component/301/svg.html', 'SVG 初试'],
         ['demo/ife/task_1_02_1.html', 'HTML+CSS页面Ⅰ'],
         ['demo/ife/task_1_05_1.html', 'HTML+CSS页面Ⅱ'],
