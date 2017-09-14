@@ -21,7 +21,6 @@ var menu = [
     ],
     ['网页小部件',
         ['demo/component/101/index.html', '简易电子时钟'],
-        ['demo/component/101/index.html', '简易电子时钟'],
         ['demo/component/201/index.html', '绘制七巧板'],
         ['demo/ife/task_3_33_1.html', 'SVG 实践'],
         ['demo/ife/task_3_38_1.html', '排序表格'],
