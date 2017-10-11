@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>抽奖</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		var timmer;
+		//预先加载数据
+		function readJson(){
+			$.getJSON("js/student.json",function(data){
+				window.alert("名单已加载，共计"+data.length+"人");
+			});
+		};
+		$(function(){
+			$.getJSON("js/student.json",function(data){
+				var total_num = data.length;
+				$("#start").click(function(){
+					timer = setInterval(function(){
+						var randnum = parseInt(Math.random()*(total_num+1));
+						$('#result').val(data[randnum].xh);
+						$('#name').val(data[randnum].xm);
+						$('#college').val(data[randnum].xy);
+					},50);
+					document.getElementById("start").disabled = true;
+        			document.getElementById("end").disabled = false;
+				});
+			});
+			$("#end").click(function(){
+				clearInterval(timer);
+				document.getElementById("start").disabled = false;
+        		document.getElementById("end").disabled = true;
+			});
+		});
+	</script>
+</head>
+<body onload="readJson()">
+	<center>
+		<img id="pic1" src="image/bg.jpg" />
+        <div id="main">
+            <p class="p1">获奖小伙伴</p>
+            <p class="p2">
+                <input id="result" type="text" readonly="readonly" />
+            </p>
+            <p class="p3">
+                <input type="text" id="name"  readonly/>&nbsp;
+                <input type="text" id="college" readonly/>
+            </p>
+            <p class="p4">
+            	<input id="start" type="button" value="开始抽奖" />
+            	<input id="end" type="button" value="停止抽奖" disabled="disabled" />
+        	</p>
+        </div>
+    <center>
+    <footer>2017 &copy;点石团队</footer>
+</body>
+</html>
