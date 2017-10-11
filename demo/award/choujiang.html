@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,53 +6,81 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript">
-		var timmer;
-		//预先加载数据
-		function readJson(){
-			$.getJSON("js/student.json",function(data){
-				window.alert("名单已加载，共计"+data.length+"人");
-			});
-		};
 		$(function(){
-			$.getJSON("js/student.json",function(data){
-				var total_num = data.length;
+			//读取json数据
+			$.getJSON("js/studentlist.json",function(data){
+				var timmer;
+				var total_num = data.length;//获得学生总人数
+				var f = false;
 				$("#start").click(function(){
-					timer = setInterval(function(){
-						var randnum = parseInt(Math.random()*(total_num+1));
-						$('#result').val(data[randnum].xh);
-						$('#name').val(data[randnum].xm);
-						$('#college').val(data[randnum].xy);
-					},50);
-					document.getElementById("start").disabled = true;
-        			document.getElementById("end").disabled = false;
+					if(f = !f){
+						$(this).val("停止抽奖");
+						timer = setInterval(function(){
+							var randnum = parseInt(Math.random()*total_num);//获得一个随机数，0~（total_num-1）
+							$('#result').val(data[randnum].XH);//显示学号
+							$('#name').val(data[randnum].XM);//显示姓名
+						},30);
+					}else{
+						$(this).val("开始抽奖");
+						clearInterval(timer); //停止
+					}
 				});
+				
 			});
-			$("#end").click(function(){
-				clearInterval(timer);
-				document.getElementById("start").disabled = false;
-        		document.getElementById("end").disabled = true;
+			$("#confirm").click(function(){
+				$(".mask").fadeOut("slow");//遮罩退去
 			});
 		});
 	</script>
 </head>
-<body onload="readJson()">
+<body>
+	<div>
+		<script type="text/javascript">
+			//加载进度
+			$(function(){
+				var i = 0;
+				var s = false;
+				timer = setInterval(function(){
+      				var randnum = parseInt(Math.random()*(9+1));//生成一个1~9范围内的随机数
+      				if((i>=90)||(s == true)){
+      					clearInterval(timer);
+      				}
+      				else{
+      					i+=randnum;
+      					$("#message").html("名单加载中..."+i+"%");
+      				}
+      			},200);
+      			$.getJSON("js/studentlist.json",function(data){
+						s = true;//判断json文件是否加载完成
+						$('#message').html("名单已加载，共计"+data.length+"人");
+						$("#confirm").show(); 
+					});
+			});
+		</script>
+	</div>
 	<center>
-		<img id="pic1" src="image/bg.jpg" />
+		<img id="pic1" src="image/background.jpg" />
         <div id="main">
-            <p class="p1">获奖小伙伴</p>
+        	<p class="p1">
+            	<input id="start" type="button" value="开始抽奖" />
+        	</p>
             <p class="p2">
                 <input id="result" type="text" readonly="readonly" />
             </p>
             <p class="p3">
-                <input type="text" id="name"  readonly/>&nbsp;
-                <input type="text" id="college" readonly/>
-            </p>
-            <p class="p4">
-            	<input id="start" type="button" value="开始抽奖" />
-            	<input id="end" type="button" value="停止抽奖" disabled="disabled" />
-        	</p>
+                <input type="text" id="name" readonly="readonly" />
         </div>
     <center>
-    <footer>2017 &copy;点石团队</footer>
+    <footer>
+    	<span>技术支持&copy;点石团队 2012-2017</span>
+    	<img id="pic2" src="image/logo.jpg">
+    </footer>
+    
+    <div class="mask">
+    	<div id="hiden_block">
+    		<p id="message"></p>
+    		<input id="confirm" type="button" value="确定" />
+    	</div>
+    </div>
 </body>
 </html>
