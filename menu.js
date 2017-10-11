@@ -1,6 +1,6 @@
 var menu = [
     ['单页面制作',
-        ['demo/award/choujiang.html','维吉尼亚密码'],
+        ['demo/award/choujiang.html','元旦晚会抽奖程序'],
         ['demo/vigenere.html','维吉尼亚密码'],
         // ['demo/warriors.html','NBA金州勇士队数据统计'],
         ['demo/ife/task_1_01_1.html', 'HTML页面'],
