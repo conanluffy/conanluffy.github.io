@@ -3,6 +3,7 @@ html, body, dl, dt, dd {
 }
 body {
     background: #f3f5f6;
+    overflow: hidden;
 }
 .github-link{
     display: block;

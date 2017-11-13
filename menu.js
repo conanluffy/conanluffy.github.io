@@ -3,8 +3,8 @@ var menu = [
         ['demo/award/choujiang.html','元旦晚会抽奖程序'],
         ['demo/vigenere.html','维吉尼亚密码'],
         // ['demo/warriors.html','NBA金州勇士队数据统计'],
-        ['demo/ife/task_1_01_1.html', 'HTML页面'],
-        ['demo/ife/task_1_03_1.html', '三栏式布局'],
+        // ['demo/ife/task_1_01_1.html', 'HTML页面'],
+        // ['demo/ife/task_1_03_1.html', '三栏式布局'],
         ['components/csscenter/app/index.html', '定位及居中'],
         ['demo/ife/task_1_08_1.html', '响应式网格布局'],
         ['demo/ife/task_1_10_1.html', 'Flexbox布局'],
@@ -62,3 +62,17 @@ list = '<a href=\"https://github.com/conanluffy\" target=\"_blank\" class=\"gith
 window.onload = function () {
     document.body.innerHTML = list;
 }
+// var imgSrcs = [];
+// for (var i = 0; i < 60; i++) {
+//     imgSrcs[i] = "bing-images/"+(i+1)+".jpg";
+// }
+// console.log(imgSrcs)
+// var i = 0;
+// $("body").css("background", "url(" + imgSrcs[i] + ")");
+// setInterval(function() {
+//     i++;
+//     $("body").css("background", "url(" + imgSrcs[i] + ")");
+//     if(i == 60){
+//         i = 0;
+//     }
+// }, 80000);
