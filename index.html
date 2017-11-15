@@ -6,29 +6,44 @@
 	<title>conanluffy's blog</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		var imgSrcs = [];
+		for (var i = 0; i < 60; i++) {
+			imgSrcs[i] = "images/bing-images/"+(i+1)+".jpg";
+		}
+		setInterval(function() {
+			var randnum = parseInt(Math.random()*60)+1;
+			$("body").css("background", "url(" + imgSrcs[randnum] + ")");
+		}, 86400000);
+	</script>
 </head>
 <body>
-	<!-- <div>
-		<a href="#">conanluffy</a>
-		<div>
-			<ul>
-				<li><a>HOME</a></li>
-				<li><a>BLOG</a></li>
-				<li><a>DEMO</a></li>
-				<li><a>ABOUT</a></li>
-			</ul>
+	<div class="mask">
+		<div class="content-cover">
+			<div class="content">
+				<a href="index.html" class="index-button">conanluffy</a>
+				<div class="navigation-wrapper">
+					<nav class="cover-navigation">
+						<ul class="navigation">
+							<li class="navigation-item"><a href="index.html">HOME</a></li>
+							<li class="navigation-item"><a href="blog/index.html" target="_blank">BLOG</a></li>
+							<li class="navigation-item"><a href="demo/demo.html" target="_blank">DEMO</a></li>
+							<li class="navigation-item"><a href="about/about.html" target="_blank">ABOUT</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="navigation-wrapper">
+					<nav class="cover-navigation">
+						<ul class="navigation">
+							<li class="personal-account"><a href="https://github.com/conanluffy" target="_blank" title="Github"><img src="images/icon/github.png"></a></li>
+							<li class="personal-account"><a href="mailto:923561179" target="_blank" title="QQ"><img src="images/icon/qq.png"></a></li>
+							<li class="personal-account"><a href="mailto:20131004440@cug.edu.cn" target="_blank" title="Mail"><img src="images/icon/mail.png"></a></li>
+							<li class="personal-account"><a href="https://www.zhihu.com/people/he-bi-wen-ne/activities" target="_blank" title="Zhihu"><img src="images/icon/zhihu.png"></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 		</div>
-		<div>
-			<ul>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-	</div> -->
-	<div id="main">
-		<script type="text/javascript" src="menu.js"></script>
 	</div>
 	<script type="text/javascript" src="js/baidu-analytics.js"></script>
 </body>
