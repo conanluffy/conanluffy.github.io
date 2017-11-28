@@ -1,50 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>conanluffy's blog</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript">
-		var imgSrcs = [];
-		for (var i = 0; i < 60; i++) {
-			imgSrcs[i] = "images/bing-images/"+(i+1)+".jpg";
-		}
-		setInterval(function() {
-			var randnum = parseInt(Math.random()*60)+1;
-			$("body").css("background", "url(" + imgSrcs[randnum] + ")");
-		}, 86400000);
-	</script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>conanluffy's blog</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
+
 <body>
-	<div class="mask">
-		<div class="content-cover">
-			<div class="content">
-				<a href="index.html" class="index-button">conanluffy</a>
-				<div class="navigation-wrapper">
-					<nav class="cover-navigation">
-						<ul class="navigation">
-							<li class="navigation-item"><a href="index.html">HOME</a></li>
-							<li class="navigation-item"><a href="blog/index.html" target="_blank">BLOG</a></li>
-							<li class="navigation-item"><a href="demo/demo.html" target="_blank">DEMO</a></li>
-							<li class="navigation-item"><a href="about/about.html" target="_blank">ABOUT</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="navigation-wrapper">
-					<nav class="cover-navigation">
-						<ul class="navigation">
-							<li class="personal-account"><a href="https://github.com/conanluffy" target="_blank" title="Github"><img src="images/icon/github.png"></a></li>
-							<li class="personal-account"><a href="mailto:923561179" target="_blank" title="QQ"><img src="images/icon/qq.png"></a></li>
-							<li class="personal-account"><a href="mailto:20131004440@cug.edu.cn" target="_blank" title="Mail"><img src="images/icon/mail.png"></a></li>
-							<li class="personal-account"><a href="https://www.zhihu.com/people/he-bi-wen-ne/activities" target="_blank" title="Zhihu"><img src="images/icon/zhihu.png"></a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="js/google-analytics.js"></script>
+<div class="vi">
+    <div class="sidebar">
+        <div class="header">
+            <h1>conanluffy</h1>
+            <div class="quote">
+                <p class="quote-text animate-init">不积跬步，无以至千里。不积小流，无以成江海。</p>
+                <p class="quote-author animate-init">《劝学篇》—— <strong>荀子</strong></p>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="animate-init">HOME</a>
+            <a href="blog/index.html" class="animate-init" target="_blank">BLOG</a>
+            <a href="demo/demo.html" class="animate-init" target="_blank">DEMO</a>
+            <a href="about/about.html" class="animate-init" target="_blank">ABOUT</a>
+        </div>
+        <div class="location">
+            <i class="location-icon"></i>
+            <span class="location-text animate-init">NanJing - China</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="index.js"></script>
+<script>
+    $(document).ready(function () {
+        var delay = 1;
+        var DELAY_STEP = 200;
+        var animationOptions = { opacity: 1, top: 0};
+
+        $('h1').animate(animationOptions).promise()
+                .pipe(animateMain)
+                .pipe(animateLocationIcon);
+
+        function animateMain() {
+            var dfd = $.Deferred();
+            var els = $('.animate-init');
+            var size = els.size();
+
+            els.each(function (index, el) {
+                delay++;
+                $(el).delay(index * DELAY_STEP)
+                        .animate(animationOptions);
+                (size - 1 === index) && dfd.resolve();
+            });
+            return dfd.promise();
+        }
+
+        function animateLocationIcon() {
+            $('.location-icon').delay(delay * DELAY_STEP).animate({
+                opacity: 1,
+                top: 0
+            }).promise().done(animationQuote);
+        }
+
+        function animationQuote() {}
+    });
+</script>
 </body>
 </html>
