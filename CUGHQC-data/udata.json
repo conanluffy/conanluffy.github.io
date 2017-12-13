@@ -1,54 +1,18 @@
 [
 	{
-		"userid":"admin",
+		"username":"admin",
 		"passwd":"0"
 	},
 	{
-		"userid":"20131004440",
-		"passwd":"20131004440",
-		"username":"何庆澄",
+		"id":"001",
+		"name":"张三",
 		"sex":"男",
-		"birth":"1995-7-28",
-		"nation":"汉族",
-		"college":"计算机学院",
-		"major":"信息安全",
-		"class":"192132",
-		"tel":"18064097971"
+		"department":"研发部",
+		"station":"前端开发",
+		"mobile_number":"13012834934",
+		"entry_date":"2017年12月1日",
+		"trial_period":"3个月",
+		"certificate_type":"身份证",
+		"ID_number":"132434199009082334",
 	},
-	{
-		"userid":"20141002400",
-		"passwd":"20141002400",
-		"username":"李嘉图",
-		"sex":"男",
-		"birth":"1996-5-21",
-		"nation":"汉族",
-		"college":"机械与电子信息学院",
-		"major":"电子信息工程",
-		"class":"072141",
-		"tel":"15978263483"
-	},
-	{
-		"userid":"20151000362",
-		"passwd":"20151000362",
-		"username":"陈墨瞳",
-		"sex":"女",
-		"birth":"1996-11-10",
-		"nation":"汉族",
-		"college":"经济管理学院",
-		"major":"工商管理",
-		"class":"122153",
-		"tel":"13521734643"
-	},
-	{
-		"userid":"20161001122",
-		"passwd":"20161001122",
-		"username":"楚子航",
-		"sex":"男",
-		"birth":"1998-6-12",
-		"nation":"汉族",
-		"college":"工程学院",
-		"major":"安全工程",
-		"class":"082161",
-		"tel":"18123433278"
-	}
 ]
