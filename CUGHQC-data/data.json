@@ -1,23 +1,23 @@
 [
 	{
-		"username": "admin",
-		"passwd": "0"
+		"username":"admin",
+		"passwd":"0"
 	},
 	{
-		"id": "001",
-		"name": "张三",
-		"sex": "男",
-		"department": "研发部",
-		"station": "前端开发",
-		"mobile_number": "13012834934",
-		"entry_date": "2017年12月1日",
-		"trial_period": "3个月",
-		"certificate_type": "身份证",
-		"ID_number": "132434199009082334",
+		"id":"001",
+		"name":"张三",
+		"sex":"男",
+		"department":"研发部",
+		"station":"前端开发",
+		"mobile_number":"13012834934",
+		"entry_date":"2017年12月1日",
+		"trial_period":"3个月",
+		"certificate_type":"身份证",
+		"ID_number":"132434199009082334",
 	},
 	{
-		"title": "",
-		"xseries": ["人力资源部","研发中心","交付中心","市场部","技术支持"],
-		"yseries": [5, 20, 36, 10, 10],
-	},
+		"title":"",
+		"xseries":["人力资源部","研发中心","交付中心","市场部","技术支持"],
+		"yseries":[5,20,36,10,10],
+	}
 ]
