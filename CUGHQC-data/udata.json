@@ -3,7 +3,7 @@
 		"username": "admin",
 		"passwd": "0"
 	},
-	"table": {
+	"table": [{
 		"id": "001",
 		"name": "张三",
 		"sex": "男",
@@ -14,7 +14,7 @@
 		"trial_period": "3个月",
 		"certificate_type": "身份证",
 		"ID_number": "132434199009082334"
-	},
+	}],
 	"chart": {
 		"title": "人员组成",
 		"xseries": ["人力资源部","研发中心","交付中心","市场部","技术支持"],
