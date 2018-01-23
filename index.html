@@ -1,70 +1,89 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>conanluffy's blog</title>
+    <!-- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script> -->
     <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 
 <body>
-<div class="vi">
-    <div class="sidebar">
-        <div class="header">
-            <h1>conanluffy</h1>
-            <div class="quote">
-                <p class="quote-text animate-init">不积跬步，无以至千里。不积小流，无以成江海。</p>
-                <p class="quote-author animate-init">《劝学篇》—— <strong>荀子</strong></p>
+    <div class="vi">
+        <div class="sidebar">
+            <div class="header">
+                <h1>conanluffy</h1>
+                <div class="quote">
+                    <p class="quote-text animate-init">曾经沧海难为水，除却巫山不是云。</p>
+                    <p class="quote-author animate-init"><strong>——元稹《离思五首·其四》</strong></p>
+                </div>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="animate-init">HOME</a>
+                <a href="blog/index.html" class="animate-init" target="_blank">BLOG</a>
+                <a href="demo/demo.html" class="animate-init" target="_blank">DEMO</a>
+                <a href="about/about.html" class="animate-init" target="_blank">ABOUT</a>
+            </div>
+            <div class="location">
+                <i class="location-icon"></i>
+                <span class="location-text animate-init">NanJing - China</span>
             </div>
         </div>
-        <div class="menu">
-            <a href="index.html" class="animate-init">HOME</a>
-            <a href="blog/index.html" class="animate-init" target="_blank">BLOG</a>
-            <a href="demo/demo.html" class="animate-init" target="_blank">DEMO</a>
-            <a href="about/about.html" class="animate-init" target="_blank">ABOUT</a>
-        </div>
-        <div class="location">
-            <i class="location-icon"></i>
-            <span class="location-text animate-init">NanJing - China</span>
-        </div>
     </div>
-</div>
-<script type="text/javascript" src="index.js"></script>
-<script>
-    $(document).ready(function () {
-        var delay = 1;
-        var DELAY_STEP = 200;
-        var animationOptions = { opacity: 1, top: 0};
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript">
+        var poetry = [];
+        $.ajax({
+            url: 'demo/poetry/poetry.json',
+            method: 'GET',
+            dataType: 'json',
+            async: false,
+            success: function(data) {
+                poetry = data;
+            },
+            error: function () {
+              alert('Poetry loaded fail');
+            }
+        });
+        var number = parseInt(Math.random()*225);
+        $('.quote-text')[0].textContent = poetry[number].verse;
+        $('.quote-author strong')[0].textContent = poetry[number].poetry;
+    </script>
+    <script>
+        $(document).ready(function () {
+            var delay = 1;
+            var DELAY_STEP = 200;
+            var animationOptions = { opacity: 1, top: 0};
 
-        $('h1').animate(animationOptions).promise()
-                .pipe(animateMain)
-                .pipe(animateLocationIcon);
+            $('h1').animate(animationOptions).promise()
+            .pipe(animateMain)
+            .pipe(animateLocationIcon);
 
-        function animateMain() {
-            var dfd = $.Deferred();
-            var els = $('.animate-init');
-            var size = els.size();
+            function animateMain() {
+                var dfd = $.Deferred();
+                var els = $('.animate-init');
+                var size = els.size();
 
-            els.each(function (index, el) {
-                delay++;
-                $(el).delay(index * DELAY_STEP)
-                        .animate(animationOptions);
-                (size - 1 === index) && dfd.resolve();
-            });
-            return dfd.promise();
-        }
+                els.each(function (index, el) {
+                    delay++;
+                    $(el).delay(index * DELAY_STEP)
+                    .animate(animationOptions);
+                    (size - 1 === index) && dfd.resolve();
+                });
+                return dfd.promise();
+            }
 
-        function animateLocationIcon() {
-            $('.location-icon').delay(delay * DELAY_STEP).animate({
-                opacity: 1,
-                top: 0
-            }).promise().done(animationQuote);
-        }
+            function animateLocationIcon() {
+                $('.location-icon').delay(delay * DELAY_STEP).animate({
+                    opacity: 1,
+                    top: 0
+                }).promise().done(animationQuote);
+            }
 
-        function animationQuote() {}
-    });
-</script>
-<script type="text/javascript" src="js/google-analytics.js"></script>
+            function animationQuote() {}
+        });
+    </script>
+    <script type="text/javascript" src="js/google-analytics.js"></script>
 </body>
 </html>
