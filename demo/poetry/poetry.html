@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>抒情诗-爱情</title>
+	<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+	  body {
+	  	padding: 10px;
+	  }
+		.btn {
+			padding: 20px 0;
+			text-align: center;
+		}
+		button {
+	    width: 60px;
+	    height: 30px;
+		}
+		p {
+			padding-top:30px;
+			position: relative;
+		}
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+		.poetry {
+			display: block;
+			right: 0;
+			font-weight: bold;
+			position: absolute;
+		}
+		.random {
+			padding: 30px 0;
+		}
+</style>
+</head>
+<body>
+	<div class="btn"><button onclick="button1();">全部</button>&nbsp;&nbsp;<button onclick="button2();">随机</button></div>
+	<div class="all"></div>
+	<div class="random" style="display: none;">
+		<a class="quote-text verse">曾经沧海难为水，除却巫山不是云。</a>
+    <a class="quote-author poetry"><strong>——元稹《离思五首·其四》</strong></a>
+	</div>
+	<script type="text/javascript">
+		var data = [];
+		$.ajax({
+			url: 'poetry.json',
+			method: 'GET',
+			dataType: 'json',
+			async: false,
+			success: function(res) {
+				data = res;
+			},
+			error: function () {
+				alert('fail');
+			}
+		});
+		var count = 0;
+		var list = '';
+		for(var i=0,l=data.length;i<l;i++){
+			count++;
+			list+='<p class="item">'+count+'：'+'<a class="verse" target="_blank" href='+data[i].verseLink+'>'+data[i].verse+'</a>'+'<a class="poetry" target="_blank" href='+data[i].poetryLink+'>——'+data[i].poetry+'</a></p>';
+		}
+		$('.all').append(list);
+		function random(){
+			var number = parseInt(Math.random()*225);
+	    $('.quote-text')[0].textContent = data[number].verse;
+	    $('.quote-author strong')[0].textContent = data[number].poetry;
+		}
+		function button1(){
+			$('.random').hide();
+			$('.all').show();
+		}
+		function button2(){
+			$('.all').hide();
+			random();
+			$('.random').show();
+		};
+	</script>
+</body>
+</html>
