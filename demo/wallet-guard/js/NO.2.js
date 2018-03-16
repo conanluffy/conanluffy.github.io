@@ -21,7 +21,7 @@
     return getOffset(node.parentNode, offset);
   }
   dv.setAttribute('otop', getOffset(dv).top); //存储原来的距离顶部的距离
-  $(window).scroll(function () {
+  window.onscroll = function () {
     st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
     if (st > parseInt(dv.getAttribute('otop'))) { 
       if (dv.style.position != 'fixed') {
@@ -31,5 +31,5 @@
     else if (dv.style.position != 'static'){
       dv.setAttribute('style','position: static;');
     }
-  });
+  };
 })();
