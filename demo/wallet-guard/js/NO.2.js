@@ -1,4 +1,4 @@
-$(function () {
+function scrollTop() {
 	var ie6 = document.all;
 	var dv = $('#navigator'), st;
 	dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离
@@ -13,4 +13,4 @@ $(function () {
 			dv.css({'position': 'static'});
 		}
 	});
-});
+}();
