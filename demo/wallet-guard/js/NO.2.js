@@ -1,6 +1,6 @@
 function scrollTop() {
 	var ie6 = document.all;
-	var dv = $('#navigator'), st;
+	var dv = document.getElementById('navigator'), st;
 	dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离
 	$(window).scroll(function () {
 		st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
